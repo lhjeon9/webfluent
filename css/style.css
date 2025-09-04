@@ -73,7 +73,7 @@
 }
 
 .visual-title .cta {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 
@@ -109,12 +109,12 @@ main > section + section {
 .business-list li {
   border: 1px solid var(--black30);
   /* fx1-1-a */
-  flex: 1 1 auto;
+  flex: 1 1 clamp(28rem, 20vw, 474rem);
   /* w28r+h30.2r */
-  width: 28rem;
-  width: 23.7288%;
+  /* width: 28rem;
+  width: 23.7288%; */
 
-  height: 30.2rem;
+  min-height: 30.2rem;
   /* p2.8r-3.2r */
   padding: 2.8rem 3.2rem;
   /* bxsh */
@@ -277,6 +277,7 @@ main > section + section {
   .visual-title {
     width: 46rem;
     width: 47.5207%;
+    left: 6%;
   }
 
   .business-list {
@@ -284,8 +285,8 @@ main > section + section {
   }
 
   .business-list li {
-    width: 47.4rem;
-    width: 48.9669%;
+    /* width: 47.4rem;
+    width: 48.9669%; */
 
     height: 28rem;
   }
@@ -306,5 +307,47 @@ main > section + section {
 
   .column h5 + p {
     column-count: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .visual-title {
+    width: 86%;
+  }
+
+  .works-list li {
+    flex-basis: 100%; /* fxb100p */
+  }
+
+  .news-con {
+    flex-direction: column; /* fxdc */
+  }
+
+  .news-con .news-text,
+  .news-con figure {
+    width: 100%;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 500px) {
+  .hero {
+    height: 48rem;
+    height: calc(100vh - 10rem);
+  }
+
+  .visual-title {
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+
+  .visual-title h2 {
+    font-size: 3rem;
+  }
+
+  .business-list li {
+    height: initial;
+    height: auto;
   }
 }
