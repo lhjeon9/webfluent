@@ -50,6 +50,7 @@
   color: #fff;
 
   width: 69rem;
+  width: 58.4746%;
 }
 
 .visual-title h2 {
@@ -255,13 +256,5 @@ main > section + section {
 .column p + p strong {
   display: block;
   font-weight: 700;
-}
-
-/* footer */
-.footer {
-  /* bg#333+c#fff+p5.2r-0 */
-  background: #333;
-  color: #fff;
-  padding: 5.2rem 0;
 }
 
